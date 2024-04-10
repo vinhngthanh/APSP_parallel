@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -18,4 +19,19 @@ void apsp(int **graph, int n)
 
 int main()
 {
+    int n;
+    cin >> n;
+
+    int **graph = new int *[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        graph[i] = new int[n];
+        for (int j = 0; j < n; j++)
+        {
+            cin >> graph[i][j];
+        }
+    }
+
+    apsp(graph, n);
 }
