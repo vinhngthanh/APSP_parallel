@@ -8,8 +8,10 @@ int INF = 2147483647;
 
 void apsp(int **graph, int n)
 {
+    omp_set_num_threads(5);
     for (int k = 0; k < n; k++)
     {
+        #pragma omp parallel for
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)

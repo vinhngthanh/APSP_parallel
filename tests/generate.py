@@ -1,6 +1,6 @@
 import random
 
-def generate_random_directed_graph(num_nodes, max_weight = 100, probability = 0.7):
+def generate_random_directed_graph(num_nodes, max_weight = 10000, probability = 0.7):
   graph = [[1000000000] * num_nodes for _ in range(num_nodes)]
 
   for i in range(num_nodes):
@@ -16,8 +16,8 @@ def generate_random_directed_graph(num_nodes, max_weight = 100, probability = 0.
     output += " ".join([str(val) for val in row]) + "\n"
   return output
 
-num_nodes = 10
+num_nodes = 2000
 graph_string = generate_random_directed_graph(num_nodes)
 
-with open('test1.txt', 'w') as file:
+with open('test6.txt', 'w') as file:
   file.write(graph_string)
