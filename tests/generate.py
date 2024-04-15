@@ -1,7 +1,7 @@
 import random
 
-def generate_random_directed_graph(num_nodes, max_weight = 10, probability = 0.7):
-  graph = [[2147483647] * num_nodes for _ in range(num_nodes)]
+def generate_random_directed_graph(num_nodes, max_weight = 100, probability = 0.7):
+  graph = [[1000000000] * num_nodes for _ in range(num_nodes)]
 
   for i in range(num_nodes):
     for j in range(num_nodes):
