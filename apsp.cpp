@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include <stdlib.h>
 
 using namespace std;
@@ -36,6 +37,11 @@ void print(int **graph, int n)
 
 int main()
 {
+    using chrono::high_resolution_clock;
+	using chrono::duration;
+	
+	auto start = high_resolution_clock::now();
+
     int n;
     cin >> n;
 
@@ -51,5 +57,10 @@ int main()
     }
 
     apsp(graph, n);
-    print(graph, n);
+    // print(graph, n);
+    	
+    auto end = high_resolution_clock::now();
+	duration<double, milli> time = end - start;
+	
+	cout << "Duration: " << time.count() << " miliseconds." << endl;
 }

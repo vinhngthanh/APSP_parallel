@@ -1,14 +1,15 @@
 #include <iostream>
 #include <stdlib.h>
+#include <chrono>
 #include <omp.h>
 
 using namespace std;
 
 int INF = 2147483647;
 
-void apsp(int **graph, int n)
+void apsp(int **graph, int n, int numThread)
 {
-    omp_set_num_threads(5);
+    omp_set_num_threads(numThread);
     for (int k = 0; k < n; k++)
     {
         #pragma omp parallel for
@@ -39,6 +40,11 @@ void print(int **graph, int n)
 
 int main()
 {
+    using chrono::high_resolution_clock;
+	using chrono::duration;
+	
+	auto start = high_resolution_clock::now();
+
     int n;
     cin >> n;
 
@@ -53,6 +59,13 @@ int main()
         }
     }
 
-    apsp(graph, n);
-    print(graph, n);
+    int numThread;
+    cin >> numThread;
+    apsp(graph, n, numThread);
+    // print(graph, n);
+
+    auto end = high_resolution_clock::now();
+	duration<double, milli> time = end - start;
+	
+	cout << "Duration: " << time.count() << " miliseconds." << endl;
 }
