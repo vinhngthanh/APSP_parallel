@@ -58,6 +58,12 @@ int main()
 
     apsp(graph, n);
     // print(graph, n);
+
+    for (int i = 0; i < n; i++)
+    {
+        delete[] graph[i];
+    }
+    delete[] graph;
     	
     auto end = high_resolution_clock::now();
 	duration<double, milli> time = end - start;

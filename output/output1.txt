@@ -1,0 +1,51 @@
+Running test 1 iteration 1 with 1 thread:
+Duration: 0.053291 miliseconds.
+Running test 1 iteration 2 with 1 thread:
+Duration: 0.052547 miliseconds.
+Running test 1 iteration 3 with 1 thread:
+Duration: 0.052475 miliseconds.
+Running test 1 iteration 4 with 1 thread:
+Duration: 0.051531 miliseconds.
+Running test 1 iteration 5 with 1 thread:
+Duration: 0.104313 miliseconds.
+Running test 1 iteration 6 with 1 thread:
+Duration: 0.051444 miliseconds.
+Running test 1 iteration 7 with 1 thread:
+Duration: 0.052073 miliseconds.
+Running test 1 iteration 8 with 1 thread:
+Duration: 0.052323 miliseconds.
+Running test 1 iteration 9 with 1 thread:
+Duration: 0.051479 miliseconds.
+Running test 1 iteration 10 with 1 thread:
+Duration: 0.052176 miliseconds.
+
+Running test 1 iteration 1 with 2 thread:
+Duration: 0.066434 miliseconds.
+Running test 1 iteration 2 with 2 thread:
+Failed to execute command: Command 'cat ./tests/test1.txt | ./apsp_parallel 2' returned non-zero exit status 1.
+Running test 1 iteration 3 with 2 thread:
+Duration: 0.067463 miliseconds.
+Running test 1 iteration 4 with 2 thread:
+Duration: 0.066226 miliseconds.
+Running test 1 iteration 5 with 2 thread:
+Duration: 0.064222 miliseconds.
+Running test 1 iteration 6 with 2 thread:
+Failed to execute command: Command 'cat ./tests/test1.txt | ./apsp_parallel 2' returned non-zero exit status 139.
+Running test 1 iteration 7 with 2 thread:
+Duration: 0.072769 miliseconds.
+Running test 1 iteration 8 with 2 thread:
+Failed to execute command: Command 'cat ./tests/test1.txt | ./apsp_parallel 2' returned non-zero exit status 1.
+Running test 1 iteration 9 with 2 thread:
+Duration: 0.074683 miliseconds.
+Running test 1 iteration 10 with 2 thread:
+Duration: 0.06537 miliseconds.
+
+Running test 1 iteration 1 with 4 thread:
+Duration: 0.067182 miliseconds.
+Running test 1 iteration 2 with 4 thread:
+Duration: 0.063396 miliseconds.
+Running test 1 iteration 3 with 4 thread:
+Failed to execute command: Command 'cat ./tests/test1.txt | ./apsp_parallel 4' returned non-zero exit status 1.
+Running test 1 iteration 4 with 4 thread:
+Failed to execute command: Command 'cat ./tests/test1.txt | ./apsp_parallel 4' returned non-zero exit status 1.
+Running test 1 iteration 5 with 4 thread:
