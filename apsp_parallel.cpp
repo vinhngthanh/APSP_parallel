@@ -10,9 +10,10 @@ int INF = 2147483647;
 void apsp(int **graph, int n, int numThread)
 {
     omp_set_num_threads(numThread);
+    #pragma omp parallel for
     for (int k = 0; k < n; k++)
     {
-        #pragma omp parallel for
+        // #pragma omp parallel for
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
@@ -62,7 +63,7 @@ int main()
     int numThread;
     cin >> numThread;
     apsp(graph, n, numThread);
-    // print(graph, n);
+    print(graph, n);
 
     for (int i = 0; i < n; i++)
     {
@@ -73,5 +74,5 @@ int main()
     auto end = high_resolution_clock::now();
 	duration<double, milli> time = end - start;
 	
-	cout << "Duration: " << time.count() << " miliseconds." << endl;
+	// cout << "Duration: " << time.count() << " miliseconds." << endl;
 }
