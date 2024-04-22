@@ -1,21 +1,168 @@
 Running test 6 iteration 1 with 1 thread:
-Duration: 32537.3 miliseconds.
+Duration: 32697.3 miliseconds.
 Running test 6 iteration 2 with 1 thread:
-Duration: 32366.7 miliseconds.
+Duration: 32416.7 miliseconds.
 Running test 6 iteration 3 with 1 thread:
-Duration: 32399.6 miliseconds.
+Duration: 32419.6 miliseconds.
 Running test 6 iteration 4 with 1 thread:
-Duration: 32389.7 miliseconds.
+Duration: 32431.2 miliseconds.
 Running test 6 iteration 5 with 1 thread:
-Duration: 32394.5 miliseconds.
+Duration: 32451.3 miliseconds.
 Running test 6 iteration 6 with 1 thread:
-Duration: 32393.5 miliseconds.
+Duration: 32423.9 miliseconds.
 Running test 6 iteration 7 with 1 thread:
-Duration: 32406.4 miliseconds.
+Duration: 32441.8 miliseconds.
 Running test 6 iteration 8 with 1 thread:
-Duration: 32539.8 miliseconds.
+Duration: 32555.3 miliseconds.
 Running test 6 iteration 9 with 1 thread:
-Duration: 32377.1 miliseconds.
+Duration: 32419.6 miliseconds.
 Running test 6 iteration 10 with 1 thread:
-Duration: 32375.1 miliseconds.
+Duration: 32420.2 miliseconds.
+
+Running test 6 iteration 1 with 2 thread:
+Duration: 32431.1 miliseconds.
+Running test 6 iteration 2 with 2 thread:
+Duration: 32424.9 miliseconds.
+Running test 6 iteration 3 with 2 thread:
+Duration: 32431.1 miliseconds.
+Running test 6 iteration 4 with 2 thread:
+Duration: 32439.5 miliseconds.
+Running test 6 iteration 5 with 2 thread:
+Duration: 32431.1 miliseconds.
+Running test 6 iteration 6 with 2 thread:
+Duration: 32450.5 miliseconds.
+Running test 6 iteration 7 with 2 thread:
+Duration: 32424.9 miliseconds.
+Running test 6 iteration 8 with 2 thread:
+Duration: 32424.9 miliseconds.
+Running test 6 iteration 9 with 2 thread:
+Duration: 32431.1 miliseconds.
+Running test 6 iteration 10 with 2 thread:
+Duration: 32431.1 miliseconds.
+
+Running test 6 iteration 1 with 4 thread:
+Duration: 32453.6 miliseconds.
+Running test 6 iteration 2 with 4 thread:
+Duration: 32446 miliseconds.
+Running test 6 iteration 3 with 4 thread:
+Duration: 32453.6 miliseconds.
+Running test 6 iteration 4 with 4 thread:
+Duration: 32446 miliseconds.
+Running test 6 iteration 5 with 4 thread:
+Duration: 32446 miliseconds.
+Running test 6 iteration 6 with 4 thread:
+Duration: 32425.7 miliseconds.
+Running test 6 iteration 7 with 4 thread:
+Duration: 32453.6 miliseconds.
+Running test 6 iteration 8 with 4 thread:
+Duration: 32446 miliseconds.
+Running test 6 iteration 9 with 4 thread:
+Duration: 32447.3 miliseconds.
+Running test 6 iteration 10 with 4 thread:
+Duration: 32429 miliseconds.
+
+Running test 6 iteration 1 with 8 thread:
+Duration: 32432.3 miliseconds.
+Running test 6 iteration 2 with 8 thread:
+Duration: 32435.1 miliseconds.
+Running test 6 iteration 3 with 8 thread:
+Duration: 32435.1 miliseconds.
+Running test 6 iteration 4 with 8 thread:
+Duration: 32435.1 miliseconds.
+Running test 6 iteration 5 with 8 thread:
+Duration: 32439.6 miliseconds.
+Running test 6 iteration 6 with 8 thread:
+Duration: 32435.1 miliseconds.
+Running test 6 iteration 7 with 8 thread:
+Duration: 32419.6 miliseconds.
+Running test 6 iteration 8 with 8 thread:
+Duration: 32437.1 miliseconds.
+Running test 6 iteration 9 with 8 thread:
+Duration: 32435.1 miliseconds.
+Running test 6 iteration 10 with 8 thread:
+Duration: 32419.6 miliseconds.
+
+Running test 6 iteration 1 with 16 thread:
+Duration: 32432.4 miliseconds.
+Running test 6 iteration 2 with 16 thread:
+Duration: 32461.9 miliseconds.
+Running test 6 iteration 3 with 16 thread:
+Duration: 32432.4 miliseconds.
+Running test 6 iteration 4 with 16 thread:
+Duration: 32432.4 miliseconds.
+Running test 6 iteration 5 with 16 thread:
+Duration: 32436.2 miliseconds.
+Running test 6 iteration 6 with 16 thread:
+Duration: 32432.4 miliseconds.
+Running test 6 iteration 7 with 16 thread:
+Duration: 32439.2 miliseconds.
+Running test 6 iteration 8 with 16 thread:
+Duration: 32439.4 miliseconds.
+Running test 6 iteration 9 with 16 thread:
+Duration: 32439.4 miliseconds.
+Running test 6 iteration 10 with 16 thread:
+Duration: 32439.4 miliseconds.
+
+Running test 6 iteration 1 with 32 thread:
+Duration: 32438.2 miliseconds.
+Running test 6 iteration 2 with 32 thread:
+Duration: 32431 miliseconds.
+Running test 6 iteration 3 with 32 thread:
+Duration: 32434.4 miliseconds.
+Running test 6 iteration 4 with 32 thread:
+Duration: 32433.7 miliseconds.
+Running test 6 iteration 5 with 32 thread:
+Duration: 32436.3 miliseconds.
+Running test 6 iteration 6 with 32 thread:
+Duration: 32436.1 miliseconds.
+Running test 6 iteration 7 with 32 thread:
+Duration: 32434.4 miliseconds.
+Running test 6 iteration 8 with 32 thread:
+Duration: 32434.4 miliseconds.
+Running test 6 iteration 9 with 32 thread:
+Duration: 32434.4 miliseconds.
+Running test 6 iteration 10 with 32 thread:
+Duration: 32416.3 miliseconds.
+
+Running test 6 iteration 1 with 64 thread:
+Duration: 32408.2 miliseconds.
+Running test 6 iteration 2 with 64 thread:
+Duration: 32440.9 miliseconds.
+Running test 6 iteration 3 with 64 thread:
+Duration: 32462.4 miliseconds.
+Running test 6 iteration 4 with 64 thread:
+Duration: 32408.2 miliseconds.
+Running test 6 iteration 5 with 64 thread:
+Duration: 32433.2 miliseconds.
+Running test 6 iteration 6 with 64 thread:
+Duration: 32408.2 miliseconds.
+Running test 6 iteration 7 with 64 thread:
+Duration: 32418.8 miliseconds.
+Running test 6 iteration 8 with 64 thread:
+Duration: 32408.2 miliseconds.
+Running test 6 iteration 9 with 64 thread:
+Duration: 32435.4 miliseconds.
+Running test 6 iteration 10 with 64 thread:
+Duration: 32433.2 miliseconds.
+
+Running test 6 iteration 1 with 128 thread:
+Duration: 32423.7 miliseconds.
+Running test 6 iteration 2 with 128 thread:
+Duration: 32438.8 miliseconds.
+Running test 6 iteration 3 with 128 thread:
+Duration: 32438.8 miliseconds.
+Running test 6 iteration 4 with 128 thread:
+Duration: 32446.4 miliseconds.
+Running test 6 iteration 5 with 128 thread:
+Duration: 32433.8 miliseconds.
+Running test 6 iteration 6 with 128 thread:
+Duration: 32438.8 miliseconds.
+Running test 6 iteration 7 with 128 thread:
+Duration: 32438 miliseconds.
+Running test 6 iteration 8 with 128 thread:
+Duration: 32442.1 miliseconds.
+Running test 6 iteration 9 with 128 thread:
+Duration: 32433.6 miliseconds.
+Running test 6 iteration 10 with 128 thread:
+Duration: 32438.8 miliseconds.
 

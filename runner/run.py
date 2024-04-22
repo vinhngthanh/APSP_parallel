@@ -2,9 +2,9 @@ import subprocess
 
 num_tests = 6
 iterations_per_test = 10
-num_threads = [1, 2, 4, 8, 10, 16, 20, 24, 32, 40, 64]
+num_threads = [1, 2, 4, 8, 16, 32, 64, 128]
 
-for i in range(1, num_tests + 1):
+for i in range(6, num_tests + 1):
     destination = './output/output' + str(i) + '.txt'
     with open(destination, 'w') as output_file:
         for j in num_threads:
