@@ -1,0 +1,54 @@
+Average time running test1 10 times with 1 threads: 0.12
+Average time running test1 10 times with 2 threads: 0.09
+Average time running test1 10 times with 4 threads: 0.07
+Average time running test1 10 times with 8 threads: 0.05
+Average time running test1 10 times with 16 threads: 0.05
+Average time running test1 10 times with 32 threads: 0.05
+Average time running test1 10 times with 64 threads: 0.05
+Average time running test1 10 times with 128 threads: 0.04
+
+Average time running test2 10 times with 1 threads: 1.56
+Average time running test2 10 times with 2 threads: 1.25
+Average time running test2 10 times with 4 threads: 1.03
+Average time running test2 10 times with 8 threads: 0.86
+Average time running test2 10 times with 16 threads: 0.69
+Average time running test2 10 times with 32 threads: 0.57
+Average time running test2 10 times with 64 threads: 0.55
+Average time running test2 10 times with 128 threads: 0.6
+
+Average time running test3 10 times with 1 threads: 8.2
+Average time running test3 10 times with 2 threads: 6.74
+Average time running test3 10 times with 4 threads: 5.37
+Average time running test3 10 times with 8 threads: 4.06
+Average time running test3 10 times with 16 threads: 3.43
+Average time running test3 10 times with 32 threads: 2.32
+Average time running test3 10 times with 64 threads: 1.96
+Average time running test3 10 times with 128 threads: 1.83
+
+Average time running test4 10 times with 1 threads: 599.79
+Average time running test4 10 times with 2 threads: 492.21
+Average time running test4 10 times with 4 threads: 392.53
+Average time running test4 10 times with 8 threads: 293.31
+Average time running test4 10 times with 16 threads: 235.82
+Average time running test4 10 times with 32 threads: 179.31
+Average time running test4 10 times with 64 threads: 134.17
+Average time running test4 10 times with 128 threads: 109.39
+
+Average time running test5 10 times with 1 threads: 4323.96
+Average time running test5 10 times with 2 threads: 3332.36
+Average time running test5 10 times with 4 threads: 2606.22
+Average time running test5 10 times with 8 threads: 2060.72
+Average time running test5 10 times with 16 threads: 1506.53
+Average time running test5 10 times with 32 threads: 1248.26
+Average time running test5 10 times with 64 threads: 934.3
+Average time running test5 10 times with 128 threads: 735.91
+
+Average time running test6 10 times with 1 threads: 32467.69
+Average time running test6 10 times with 2 threads: 25032.02
+Average time running test6 10 times with 4 threads: 20444.68
+Average time running test6 10 times with 8 threads: 14832.37
+Average time running test6 10 times with 16 threads: 11438.51
+Average time running test6 10 times with 32 threads: 8932.92
+Average time running test6 10 times with 64 threads: 6825.67
+Average time running test6 10 times with 128 threads: 5137.28
+
