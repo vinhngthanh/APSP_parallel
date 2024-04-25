@@ -7,11 +7,31 @@ using namespace std;
 
 int INF = 2147483647;
 
+// void apsp(int **graph, int n, int numThread)    
+// {   
+//     int i, j ,k;
+//     omp_set_num_threads(numThread);
+//     #pragma omp parallel shared(graph)
+//     for (k = 0; k < n; k++)
+//     {
+//         #pragma omp parallel for private(i, j) schedule(static)
+//         for (i = 0; i < n; i++)
+//         {
+//             for (j = 0; j < n; j++)
+//             {
+//                 if(graph[i][j] > graph[i][k] + graph[k][j]){
+//                     graph[i][j] = graph[i][k] + graph[k][j];
+//                 }     
+//             }
+//         }
+//     }
+// }
+
 void apsp(int **graph, int n, int numThread)    
 {   
     int i, j ,k;
     omp_set_num_threads(numThread);
-    #pragma omp parallel shared(graph)
+
     for (k = 0; k < n; k++)
     {
         #pragma omp parallel for private(i, j) schedule(static)
@@ -21,7 +41,7 @@ void apsp(int **graph, int n, int numThread)
             {
                 if(graph[i][j] > graph[i][k] + graph[k][j]){
                     graph[i][j] = graph[i][k] + graph[k][j];
-                }          
+                }      
             }
         }
     }
@@ -40,7 +60,7 @@ void print(int **graph, int n)
     cout << "\n";
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     using chrono::high_resolution_clock;
 	using chrono::duration;
@@ -61,8 +81,7 @@ int main()
         }
     }
 
-    int numThread;
-    cin >> numThread;
+    int numThread = atoi(argv[1]);
     apsp(graph, n, numThread);
     // print(graph, n);
 
