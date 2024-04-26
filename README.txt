@@ -30,32 +30,62 @@ I, Explanation of the file system:
 
 II, Explanation of code:
     apsp.cpp:
-        This lock only has two functions and one atomic variable. The atomic variable called locked is a boolean which is true when the lock is
-        locked and false otherwise. The lock function has a while loop which will try to replace locked with true. If locked is already true, it
-        will spin until locked is false. The unlock function simply sets locked to false.
+        The code implements the Floyd-Warshall algorithm for finding the shortest paths between all pairs of vertices in a given weighted graph 
+        with n vertices. The main function begins by timing the execution, reading the size n of the adjacency matrix from the input, and then 
+        populating this matrix from user input. The apsp (All Pairs Shortest Path) function then modifies this matrix to reflect the shortest 
+        paths between each pair of vertices by using a triple nested loop to update the path lengths iteratively. For each vertex k, the algorithm 
+        checks if a direct path between any two vertices i and j is shorter than a path that goes through k. If so, it updates the matrix entry to 
+        reflect this shorter path. By considering each vertex as an intermediate point in paths between all possible pairs of vertices, the 
+        algorithm ensures that the resulting matrix contains the shortest path distances between all pairs of vertices. After the shortest paths 
+        have been computed, the dynamically allocated memory for the graph is freed, and the total execution time (in milliseconds) of the program 
+        (from the setup to memory deallocation) is printed. The function to print the matrix has been provided but commented out, you can 
+        uncomment it to see the result graph.
     apsp_parallel.cpp:
-        In this read write lock implementation, I use an atomic int called readers to keep track of number of readers. When a reader want to get
-        a lock, if readers = 0 meaning the lock is there to take, it will try to aquire the lock. But if readers > 0, meaning a reader already had
-        the lock, it can continue to take the lock too because many readers can take the lock at the same time. For the readUnlock function, since
-        we have a lot of readers having the lock at the same time, calling unlock early can lead to wrong answer so we decrement the reader by 1
-        each time the function is called. Only when reader is 0 we will release the lock for contest. writeLock and writeUnlock just try to take the
-        lock and release the lock in this case. During testing, I realized that the variables can somehow be affected even when I use atomic so I
-        has to created another mutex called rmtx to lock the readLock and readUnlock function.
+        Everything here is the same as the serial version except for the apsp function where it takes in an additional number of threads. Inside
+        this function, the algorithm is parallelized using OpenMP directives. The outer loop, iterating over each vertex k as an intermediate point, 
+        is executed in sequence. The inner two loops, which iterate over all pairs of vertices i and j, are parallelized. The computation of the 
+        shortest path that might include vertex k as an intermediate point is distributed among the available threads. This parallelization is 
+        achieved using the #pragma omp parallel directive with nested #pragma omp for for distributing the iterations of the loop over i, and 
+        dynamically scheduling chunks of iterations to different threads to balance the workload efficiently.
 III, Raw data:
     You can find the raw output data in the ouput folder.
 IV, How to run:
-    1, test{i}.cpp (i is the program you want to run):
-        Locate to the a2 folder.
-        Example compile and run of test1.cpp file with test1.txt as input.
-        Compile: g++ test1.cpp -o test1
+    1, apsp.cpp:
+        Locate to the root folder.
+        Example compile and run of apsp.cpp file with test1.txt as input.
+        Compile: g++ apsp.cpp -o apsp
         Run: 
-            Linux: cat ./tests/test1.txt | ./test1
+            Linux: cat ./tests/test1.txt | ./apsp
         Output location: Terminal
 
-    2, runner.py:
-        Run: python runner.py
-        Output location: output{1-4}.txt
+        You can uncomment print(graph, n); to print the result graph.
 
-    3, summary.py:
-        Run: python summary.py
-        Output location: summary.txt
+    2, apsp_parallel.cpp:
+        Locate to the root folder.
+        Example compile and run of apsp_parallel.cpp file with test1.txt as input with 8 threads.
+        Compile: g++ apsp_parallel.cpp -o apsp_parallel -fopenmp
+        Run: 
+            Linux: cat ./tests/test1.txt | ./apsp_parallel 8
+        Output location: Terminal
+
+        You can uncomment print(graph, n); to print the result graph.
+
+    3, runner/run.py:
+        Locate to the root folder.
+        Run: python ./runner/run.py
+        Output location: output/output{1 - 6}.txt
+
+    4, summary/summary.py:
+        Locate to the summary folder.
+        Run: python ./summary.py
+        Output location: summary/summary.txt
+    
+    5, graph/avgGraph.ipynb:
+        Go into the file.
+        Run: Click on "Run All".
+        Output location: In file.
+
+    6, graph/speedupGraph.ipynb:
+        Go into the file.
+        Run: Click on "Run All".
+        Output location: In file.
