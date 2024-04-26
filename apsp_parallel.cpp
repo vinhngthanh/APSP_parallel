@@ -7,25 +7,79 @@ using namespace std;
 
 int INF = 2147483647;
 
-void apsp(int **graph, int n, int numThread)    
-{   
-    int i, j ,k;
-    omp_set_num_threads(numThread);
-    #pragma omp parallel shared(graph)
-    for (k = 0; k < n; k++)
+void apsp(int **graph, int n, int numThread) {
+    #pragma omp parallel num_threads(numThread) shared(graph, n) default(none)
     {
-        #pragma omp parallel for private(i, j) schedule(static)
-        for (i = 0; i < n; i++)
-        {
-            for (j = 0; j < n; j++)
-            {
-                if(graph[i][j] > graph[i][k] + graph[k][j]){
-                    graph[i][j] = graph[i][k] + graph[k][j];
-                }     
+        for (int k = 0; k < n; ++k) {
+            #pragma omp for
+            for (int j = 0; j < n; ++j) {
+                int k_row = graph[k][j];
+                for (int i = 0; i < n; ++i) {
+                    if (graph[i][k] + k_row < graph[i][j])
+                        graph[i][j] = graph[i][k] + k_row;
+                }
+            }
+
+            #pragma omp for
+            for (int i = 0; i < n; ++i) {
+                int k_col = graph[i][k];
+                for (int j = 0; j < n; ++j) {
+                    if (k_col + graph[k][j] < graph[i][j])
+                        graph[i][j] = k_col + graph[k][j];
+                }
             }
         }
     }
 }
+
+
+// void apsp(int **graph, int n, int numThread) {
+//     #pragma omp parallel num_threads(numThread) shared(graph, n) default(none)
+//     {
+//         for (int k = 0; k < n; ++k) {
+//             #pragma omp parallel
+//             for (int j = 0; j < n; ++j) {
+//                 int k_row = graph[k][j];
+//                 #pragma omp for
+//                 for (int i = 0; i < n; ++i) {
+//                     if (graph[i][k] + k_row < graph[i][j])
+//                         graph[i][j] = graph[i][k] + k_row;
+//                 }
+//             }
+
+//             #pragma omp parallel
+//             for (int i = 0; i < n; ++i) {
+//                 int k_col = graph[i][k];
+//                 #pragma omp for
+//                 for (int j = 0; j < n; ++j) {
+//                     if (k_col + graph[k][j] < graph[i][j])
+//                         graph[i][j] = k_col + graph[k][j];
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// void apsp(int **graph, int n, int numThread)    
+// {   
+//     int i, j ,k;
+//     omp_set_num_threads(numThread);
+//     #pragma omp parallel shared(graph)
+//     for (k = 0; k < n; k++)
+//     {
+//         #pragma omp parallel for private(i, j) schedule(static)
+//         for (i = 0; i < n; i++)
+//         {
+//             for (j = 0; j < n; j++)
+//             {
+//                 if(graph[i][j] > graph[i][k] + graph[k][j]){
+//                     graph[i][j] = graph[i][k] + graph[k][j];
+//                 }     
+//             }
+//         }
+//     }
+// }
 
 // void apsp(int **graph, int n, int numThread)    
 // {   
