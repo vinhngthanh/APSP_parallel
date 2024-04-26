@@ -57,7 +57,7 @@ int main()
     }
 
     apsp(graph, n);
-    print(graph, n);
+    // print(graph, n);
 
     for (int i = 0; i < n; i++)
     {
@@ -68,5 +68,5 @@ int main()
     auto end = high_resolution_clock::now();
 	duration<double, milli> time = end - start;
 	
-	// cout << "Duration: " << time.count() << " miliseconds." << endl;
+	cout << "Duration: " << time.count() << " miliseconds." << endl;
 }
