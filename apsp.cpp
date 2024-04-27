@@ -4,8 +4,6 @@
 
 using namespace std;
 
-int INF = 2147483647;
-
 void apsp(int **graph, int n)
 {
     for (int k = 0; k < n; k++)

@@ -5,8 +5,6 @@
 
 using namespace std;
 
-int INF = 2147483647;
-
 void apsp(int **graph, int n, int numThread) {
     #pragma omp parallel num_threads(numThread) shared(graph, n)
     {
