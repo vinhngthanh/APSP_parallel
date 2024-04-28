@@ -1,3 +1,0 @@
-g++ apsp_parallel.cpp -o apsp_parallel -fopenmp
-
-cat ./tests/test1.txt | ./apsp > ./output/output1.txt
